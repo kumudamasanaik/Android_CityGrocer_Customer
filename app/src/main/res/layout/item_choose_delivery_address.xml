@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_address_selection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_marginBottom="@dimen/dimens_8">
+
+    <RelativeLayout
+        android:id="@+id/rl_address_selection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingBottom="@dimen/dimens_10">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_msg"
+            android:layout_width="@dimen/dimens_25"
+            android:layout_height="@dimen/dimens_25"
+            android:layout_margin="@dimen/dimens_10"
+            app:srcCompat="@drawable/ic_radio_off" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:layout_toRightOf="@+id/iv_msg"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:text="Shashi Bhushan Pandey"
+            android:textSize="@dimen/dimens_15sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="@dimen/dimens_5"
+            android:layout_toEndOf="@+id/iv_msg"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="@string/mobile"
+                android:textSize="@dimen/dimens_15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_mobile_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimens_5"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="8888888888"
+                android:textSize="@dimen/dimens_15sp" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_items_reserved_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_mobile"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_10"
+            android:layout_toRightOf="@+id/iv_msg"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:maxLines="4"
+            android:text="@string/tv_address"
+            android:textColor="@color/colorHintGrey"
+            android:textSize="@dimen/dimens_14sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_edit_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_items_reserved_next"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_10"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/edit_address"
+            android:textColor="@color/colorHintGrey"
+            android:textSize="@dimen/dimens_15sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_remove_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_items_reserved_next"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_20"
+            android:layout_toLeftOf="@id/tv_edit_address"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/remove"
+            android:textAllCaps="true"
+            android:textColor="@color/colorHintGrey"
+            android:textSize="@dimen/dimens_15sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

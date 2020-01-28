@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:layout_marginBottom="@dimen/dimens_8"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_100"
+        android:layout_marginBottom="@dimen/dimens_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_allcat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dimens_10"
+                app:srcCompat="@drawable/ic_launcher_background" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="@dimen/dimens_10">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_discount_banner"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimens_5"
+                android:text="UP TO 70% OFF"
+                android:textColor="@color/colorTextYellow"
+                android:textSize="@dimen/dimens_11sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_5">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_show_more"
+                    android:layout_width="@dimen/dimens_15"
+                    android:layout_height="@dimen/dimens_15"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_cat_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dimens_5"
+                    android:layout_toLeftOf="@id/iv_show_more"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:gravity="center_vertical"
+                    android:text="UP TO 70% OFF"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/dimens_14sp" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_descript"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_3"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="@string/login_with_registered_mobile"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_sub_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimens_10"
+        android:layout_marginRight="@dimen/dimens_10"
+        android:visibility="gone" />
+</LinearLayout>

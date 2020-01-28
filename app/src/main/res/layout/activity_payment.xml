@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHalfWhite">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_header_blank" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_place_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:padding="@dimen/dimens_10"
+        android:text="@string/place_order"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dimens_14sp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_place_order"
+        android:layout_below="@id/appbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimens_5"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_5"
+            android:layout_marginBottom="@dimen/dimens_20"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_apply_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/dimens_10">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_coupon"
+                    android:layout_alignParentLeft="true"
+                    android:drawablePadding="@dimen/dimens_5"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:text="@string/apply_coupon"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/dimens_14sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_apply_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_next_black" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_apply_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:text="@string/edit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimens_12sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_redeem_points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:padding="@dimen/dimens_10"
+                android:layout_marginTop="@dimen/dimens_2">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_cg_points"
+                    android:drawablePadding="@dimen/dimens_5"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:gravity="center_vertical"
+                    android:text="@string/redeem_points"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/dimens_14sp" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_redeem_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_next_black" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_redeem_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:text="@string/edit"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimens_12sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_5"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dimens_10"
+                android:paddingRight="@dimen/dimens_10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_order_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:text="@string/order_total"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dimens_15sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_order_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimens_5"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:layout_toRightOf="@id/tv_order_total"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="(888 items)"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dimens_14sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_total_price_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/_733_00"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dimens_12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_cart_mrp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/coupon_discount"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/dimens_12sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_apply_coupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/apply_coupon"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimens_12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_cg_points_dis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/cg_discount"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/dimens_12sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_redeem_points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/redem_points"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimens_12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dimens_5">
+
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:theme="@style/MyCheckBox" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_cg_wallet_bal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimens_5"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:layout_toRightOf="@id/checkbox"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/settle_cg_wallet_balance"
+                        android:textColor="@color/text_title_color"
+                        android:textSize="@dimen/dimens_12sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_wallet_bal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/_50"
+                        android:textColor="@color/text_app_color"
+                        android:textSize="@dimen/dimens_12sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_1"
+                    android:background="@color/colorHalfWhite" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dimens_5">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_payable_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="@string/net_payable_amount"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dimens_14sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_payable_bal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:text="@string/_683_37"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dimens_12sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dimens_5">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_total_savings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/savings"
+                        android:textColor="@color/colorTextOrange"
+                        android:textSize="@dimen/dimens_14sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_savings_bal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:text="@string/_181_63"
+                        android:textColor="@color/colorTextOrange"
+                        android:textSize="@dimen/dimens_12sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:padding="@dimen/dimens_10"
+                android:text="@string/choose_payment_option"
+                android:textColor="@color/colorTextGrey" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/dimens_10">
+
+                <RadioButton
+                    android:id="@+id/iv_msg"
+                    android:layout_width="@dimen/dimens_25"
+                    android:layout_height="@dimen/dimens_25"
+                    android:layout_margin="@dimen/dimens_10"
+                    android:button="@drawable/selector_radio_button" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_10"
+                    android:layout_toRightOf="@+id/iv_msg"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:text="@string/pay_online"
+                    android:textSize="@dimen/dimens_15sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_items_reserved_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginRight="@dimen/dimens_10"
+                    android:layout_toRightOf="@+id/iv_msg"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/net_banking_paytm_debit_card_credit_card"
+                    android:textColor="@color/colorHintGrey"
+                    android:textSize="@dimen/dimens_14sp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="@dimen/dimens_10">
+
+                <RadioButton
+                    android:id="@+id/iv_radio_btn"
+                    android:layout_width="@dimen/dimens_25"
+                    android:layout_height="@dimen/dimens_25"
+                    android:layout_margin="@dimen/dimens_10"
+                    android:button="@drawable/selector_radio_button" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_pay_on_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_10"
+                    android:layout_toRightOf="@+id/iv_radio_btn"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:text="@string/pay_on_delivery"
+                    android:textSize="@dimen/dimens_15sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_pay_on_delivery_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_pay_on_delivery"
+                    android:layout_marginRight="@dimen/dimens_10"
+                    android:layout_toRightOf="@+id/iv_radio_btn"
+                    android:fontFamily="@font/sourcesanspro_regular"
+                    android:text="@string/cash_card_sodexo_meal_pass"
+                    android:textColor="@color/colorHintGrey"
+                    android:textSize="@dimen/dimens_14sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

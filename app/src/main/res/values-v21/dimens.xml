@@ -1,0 +1,4 @@
+<resources>
+
+    <dimen name="nav_drawer_header_top_padding">@dimen/dimens_12</dimen>
+</resources>

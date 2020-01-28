@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_pop_up_location_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimens_12"
+        android:text="@string/change_location"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dimens_13sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_got_it"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimens_30"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/dimens_8"
+        android:layout_marginRight="@dimen/dimens_8"
+        android:background="@drawable/bg_button_curve_disabled"
+        android:text="@string/got_it"
+        android:textColor="@color/pop_up_location"
+        android:textSize="@dimen/dimens_13sp" />
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#44BE00</color>
+    <color name="colorPrimaryDark">#369800</color>
+    <color name="colorAccent">#44BE00</color>
+
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="bg">#FFFFFF</color>
+    <color name="splash_bg">#FFFFFF</color>
+    <color name="colorHighlight">#B6B6B6</color>
+    <color name="button_light">#F1F1F1</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="colorYellow">#FFE15D</color>
+    <color name="colorAddress">#FFC2F1A9</color>
+
+    <color name="text_app_color">#FF0000</color>
+    <color name="text_title_color">#666766</color>
+
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorTextGrey">#888888</color>
+    <color name="colorLightGrey">#f9f7f7</color>
+    <color name="colorHintGrey">#AAAAAA</color>
+    <color name="colorHalfWhite">#FFE6E4E4</color>
+    <color name="colorUnderlineGrey">#CCCCCC</color>
+    <color name="colorForgotPassword">#666666</color>
+    <color name="colorTextOrange">#FF7500</color>
+    <color name="colorLocationText">#E3E3E3</color>
+
+    <color name="colorBlackOverlay">#66000000</color>
+    <color name="pop_up_location">#526CD0</color>
+    <color name="colorTextYellow">#F1EA36</color>
+    <color name="colorTextBlue">#566BB2</color>
+
+</resources>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_header_blank" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:layout_marginBottom="@dimen/dimens_15"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/fill_form_to_register"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_12sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_first_name"
+                    style="@style/edittext_style_login"
+                    android:inputType="textPersonName"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:hint="@string/first_name" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_last_name"
+                    style="@style/edittext_style_login"
+                    android:inputType="textPersonName"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:hint="@string/last_name" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_mobile_no"
+                    style="@style/edittext_style_login"
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:maxLength="10" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_email"
+                    style="@style/edittext_style_login"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_5">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_password"
+                        style="@style/edittext_style_login"
+                        android:layout_centerVertical="true"
+                        android:hint="@string/set_password"
+                        android:inputType="textPassword" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_show_password"
+                        android:layout_width="@dimen/dimens_30"
+                        android:layout_height="@dimen/dimens_30"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimens_8" />
+                </RelativeLayout>
+
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/referal_code"
+                    style="@style/edittext_style_login"
+                    android:hint="@string/referral_code" />
+
+                <RadioGroup
+                    android:id="@+id/radio_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_10"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimens_8"
+                    android:paddingRight="@dimen/dimens_4">
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/selector_radio_button"
+                        android:text="@string/male"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/dimens_13sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/selector_radio_button"
+                        android:text="@string/female"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/dimens_13sp" />
+
+                    <RadioButton
+                        android:id="@+id/radio_other"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@drawable/selector_radio_button"
+                        android:text="@string/other"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/dimens_13sp" />
+                </RadioGroup>
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_40"
+                    android:layout_margin="@dimen/dimens_15"
+                    android:background="@drawable/bg_button_curve"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:text="@string/create_account"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/dimens_14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimens_10"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/dimens_8"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/you_agree"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/dimens_8sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_terms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/terms_service"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimens_10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dimens_30"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimens_30">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/dimens_8"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/already_have_account"
+                        android:textColor="@color/colorTextGrey"
+                        android:textSize="@dimen/dimens_12sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/login"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimens_12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/layout_header_blank" />
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dimens_15"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:gravity="center"
+            android:text="@string/sent_verification_code"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_12sp" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_code"
+            style="@style/edittext_style_login"
+            android:hint="@string/enter_code" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_continue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_40"
+            android:layout_margin="@dimen/dimens_15"
+            android:background="@drawable/bg_button_curve"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/continue_verification"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimens_14sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dimens_15"
+            android:layout_marginTop="@dimen/dimens_3"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:text="@string/resend_code"
+            android:textAllCaps="true"
+            android:textColor="@color/colorForgotPassword"
+            android:textSize="@dimen/dimens_12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

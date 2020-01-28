@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/dimens_8</item>
+        <item name="android:layout_marginEnd">@dimen/dimens_20</item>
+        <item name="android:layout_marginLeft">@dimen/dimens_20</item>
+        <item name="android:layout_marginRight">@dimen/dimens_20</item>
+        <item name="android:layout_marginStart">@dimen/dimens_20</item>
+        <item name="android:layout_marginTop">@dimen/dimens_8</item>
+        <item name="android:paddingLeft">@dimen/dimens_5</item>
+        <item name="android:paddingRight">@dimen/dimens_5</item>
+        <item name="android:background">@drawable/btn_selector</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/dimens_17sp</item>
+        <item name="android:fontFamily">@font/sourcesanspro_bold</item>
+    </style>
+
+    <style name="button_full_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/dimens_8</item>
+        <item name="android:layout_marginTop">@dimen/dimens_8</item>
+        <item name="android:background">@drawable/btn_selector</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/dimens_15sp</item>
+    </style>
+
+    <style name="input_layout_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/dimens_8</item>
+        <item name="android:layout_marginLeft">@dimen/dimens_8</item>
+        <item name="android:layout_marginRight">@dimen/dimens_8</item>
+        <item name="android:layout_marginStart">@dimen/dimens_8</item>
+        <item name="android:textColorHint">@color/colorBlack</item>
+    </style>
+</resources>

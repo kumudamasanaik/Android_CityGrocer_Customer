@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_sort_by"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sort_by"
+            android:padding="@dimen/dimens_15"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_14sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_0.5"
+            android:background="@color/colorTextGrey"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_popularity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_15"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/popularity"
+            android:textSize="@dimen/dimens_12sp"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_alphabetical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_15"
+            android:text="@string/alphabetical"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/dimens_12sp"
+            android:textColor="@color/colorTextGrey"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_price_low_high"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_15"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/low_to_high"
+            android:textSize="@dimen/dimens_12sp"
+            android:textColor="@color/colorTextGrey"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_price_high_low"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_15"
+            android:text="@string/high_to_low"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/dimens_12sp"
+            android:textColor="@color/colorTextGrey"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_15"
+            android:text="@string/discount_high_to_low"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/dimens_12sp"
+            android:textColor="@color/colorTextGrey"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

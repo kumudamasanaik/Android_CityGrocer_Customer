@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dimens_150"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/dimens_5"
+    android:orientation="vertical"
+    android:padding="@dimen/dimens_3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_120"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_10"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_save_banner"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dimens_10"
+            android:paddingLeft="@dimen/dimens_10"
+            android:paddingRight="@dimen/dimens_5"
+            android:paddingTop="@dimen/dimens_5">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:gravity="center"
+                android:text="@string/save_amount"
+                android:textColor="@color/colorTextYellow"
+                android:textSize="@dimen/dimens_15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dimens_6"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="@string/_1_050_44"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/dimens_15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_mrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/_1_400_00"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_12sp" />
+        </LinearLayout>
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimens_5"
+            android:layout_marginTop="@dimen/dimens_8"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:maxLines="4"
+            android:text="@string/login_with_registered_mobile"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimens_12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_5"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:gravity="center_vertical"
+            android:text="(2+1)x 125g Pouch"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimens_13sp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_5"
+            android:layout_marginRight="@dimen/dimens_10"
+            android:background="@drawable/bg_button_green_round"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimens_15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_outline_curve"
+            android:layout_marginRight="@dimen/dimens_8"
+            android:layout_marginTop="@dimen/dimens_5"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_best_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="BEST PRICE:"
+                android:textColor="@color/colorTextBlue"
+                android:textSize="@dimen/dimens_10sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_best_mrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:drawablePadding="@dimen/dimens_5"
+                android:text="@string/_1_030_00"
+                android:textColor="@color/colorTextBlue"
+                android:textSize="@dimen/dimens_10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

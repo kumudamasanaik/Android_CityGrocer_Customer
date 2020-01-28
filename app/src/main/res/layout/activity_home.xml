@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <com.citygrocer.customer.customviews.ScreenStateView
+        android:id="@+id/multiState_rview"
+        style="@style/MultiStateViewStyle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <com.citygrocer.customer.customviews.CustomScrollView
+            android:id="@+id/custom_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorHalfWhite">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include
+                        layout="@layout/view_pager_banner_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:layout_marginTop="@dimen/dimens_8" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_shop_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_200"
+                    android:layout_marginTop="@dimen/dimens_8"
+                    android:layout_marginBottom="@dimen/dimens_8"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/bg_my_shop_banner" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_280"
+                    android:background="@color/colorYellow"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimens_8"
+                    android:paddingTop="@dimen/dimens_8">
+
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btn_become_cg_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_30"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/dimens_8"
+                        android:background="@drawable/bg_white_button_curve"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="@string/become_cg_member"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimens_13sp" />
+
+                    <android.support.v4.widget.SlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/sliding_panel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/btn_become_cg_member"
+                        android:background="@color/colorYellow"
+                        android:scrollbars="horizontal">
+                        <!-- Left side pane. (Master) -->
+                        <LinearLayout
+                            android:layout_width="@dimen/dimens_150"
+                            android:layout_height="match_parent">
+
+                            <android.support.v7.widget.AppCompatImageView
+                                android:id="@+id/iv_creative_banner"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/bg_offer" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_creative_products"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="@dimen/dimens_5"
+                                android:layout_weight="1"
+                                android:animateLayoutChanges="false" />
+                        </LinearLayout>
+                    </android.support.v4.widget.SlidingPaneLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:layout_marginTop="@dimen/dimens_8">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/dimens_10"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="@string/offers_zone"
+                        android:textSize="@dimen/dimens_22sp" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimens_20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimens_10"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/view_all"
+                        android:textColor="@color/colorWhite" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimens_10"
+                        android:layout_marginRight="@dimen/dimens_10"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/iv_offer1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimens_70"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/bg_offer_banner" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/iv_offer2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimens_70"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/bg_offer_banner" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimens_10"
+                        android:layout_marginRight="@dimen/dimens_10"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:layout_marginBottom="@dimen/dimens_10"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/iv_offer3"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dimens_100"
+                            android:layout_marginRight="@dimen/dimens_5"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/bg_offer" />
+
+                        <android.support.v7.widget.AppCompatImageView
+                            android:id="@+id/iv_offer4"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dimens_100"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/bg_offer" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_200"
+                    android:layout_marginTop="@dimen/dimens_8"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/bg_my_shop_banner" />
+
+                <!--  <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@color/colorLocationText">
+
+                      <android.support.v7.widget.AppCompatTextView
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent"
+                          android:layout_centerVertical="true"
+                          android:layout_margin="@dimen/dimens_8"
+                          android:fontFamily="@font/sourcesanspro_semibold"
+                          android:text="@string/header"
+                          android:textSize="@dimen/dimens_22sp" />
+
+                      <android.support.v7.widget.AppCompatButton
+                          android:layout_width="wrap_content"
+                          android:layout_height="@dimen/dimens_20"
+                          android:layout_alignParentRight="true"
+                          android:layout_centerVertical="true"
+                          android:layout_marginRight="@dimen/dimens_10"
+                          android:background="@color/bg"
+                          android:text="@string/view_all"
+                          android:textColor="@color/colorPrimary" />
+                  </RelativeLayout>
+
+                  <android.support.v7.widget.RecyclerView
+                      android:id="@+id/rv_header_products"
+                      android:layout_width="match_parent"
+                      android:layout_height="@dimen/dimens_300"
+                      android:layout_marginLeft="@dimen/dimens_8" />-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimens_8"
+                    android:background="@color/colorWhite">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_deals"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/dimens_8"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="@string/deal_of_day"
+                        android:textSize="@dimen/dimens_22sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_deals_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_deals"
+                        android:drawablePadding="@dimen/dimens_5"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="12:05:15"
+                        android:layout_marginLeft="@dimen/dimens_8"
+                        android:textColor="@color/colorTextOrange" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_deals"
+                        android:layout_marginLeft="@dimen/dimens_5"
+                        android:layout_toRightOf="@id/tv_deals_time"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="@string/remaining"
+                        android:textColor="@color/colorTextOrange" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimens_20"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dimens_10"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/view_all"
+                        android:textColor="@color/colorWhite" />
+
+                </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_deals"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_210"
+                    android:background="@color/colorWhite"
+                    android:paddingLeft="@dimen/dimens_10"
+                    android:paddingTop="@dimen/dimens_10"
+                    android:paddingRight="@dimen/dimens_5" />
+
+               <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimens_5"
+                    android:layout_marginRight="@dimen/dimens_5"
+                    android:layout_marginTop="@dimen/dimens_5"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_deals1"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimens_100"
+                        android:layout_marginRight="@dimen/dimens_5"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/bg_offer" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_deals2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimens_100"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/bg_offer" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimens_5"
+                    android:layout_marginRight="@dimen/dimens_5"
+                    android:layout_marginTop="@dimen/dimens_5"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_deals3"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimens_100"
+                        android:layout_marginRight="@dimen/dimens_5"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/bg_offer" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_deals4"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dimens_100"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/bg_offer" />
+                </LinearLayout>-->
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iv_refer_earn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimens_200"
+                    android:layout_marginTop="@dimen/dimens_8"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/bg_my_shop_banner" />
+            </LinearLayout>
+        </com.citygrocer.customer.customviews.CustomScrollView>
+
+    </com.citygrocer.customer.customviews.ScreenStateView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fb_all_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dimens_10"
+        android:tint="@color/colorWhite"
+        app:srcCompat="@drawable/ic_shop_by_category" />
+
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_size">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimens_10"
+            android:text="@string/filter"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_14sp" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/btn_close"
+            android:layout_width="@dimen/dimens_20"
+            android:layout_height="@dimen/dimens_20"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimens_15"
+            app:srcCompat="@drawable/ic_close" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_clear_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/clear_all"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_14sp" />
+
+        <View
+            android:layout_width="@dimen/dimens_0.5"
+            android:layout_height="@dimen/dimens_20"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorTextGrey" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_apply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/apply"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_14sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0.5"
+        android:layout_below="@id/toolbar_layout"
+        android:background="@color/colorTextGrey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_footer"
+        android:layout_below="@id/view"
+        android:layout_marginBottom="@dimen/dimens_5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_left"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorLocationText"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dimens_10"
+                    android:text="@string/brand"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/dimens_12sp" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dimens_5"
+                    android:gravity="end"
+                    android:text="2" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_0.5"
+                android:background="@color/colorTextGrey" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimens_10"
+                android:text="@string/size"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_0.5"
+                android:background="@color/colorTextGrey" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimens_10"
+                android:text="@string/discount"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_0.5"
+                android:background="@color/colorTextGrey" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimens_10"
+                android:text="@string/price"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_0.5"
+                android:background="@color/colorTextGrey" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_food_preference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimens_10"
+                android:text="@string/food_preference"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_0.5"
+                android:background="@color/colorTextGrey" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_search"
+                style="@style/FilterTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_10"
+                android:layout_marginRight="@dimen/dimens_10"
+                android:drawablePadding="@dimen/dimens_5"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:hint="@string/search_for_brand"
+                android:textColorHint="@color/colorTextGrey" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimens_10"
+                android:layout_marginRight="@dimen/dimens_10" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item"
+    android:layout_width="@dimen/dimens_70"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimens_10"
+    android:layout_marginRight="@dimen/dimens_10"
+    android:background="@drawable/bg_background_stroke_rectangle"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_category"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_80"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/bg_category" />
+</LinearLayout>

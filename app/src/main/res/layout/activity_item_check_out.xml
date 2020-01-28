@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHalfWhite">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_header_blank" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_footer"
+        android:layout_below="@id/appbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimens_5"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:layout_marginRight="@dimen/dimens_5"
+            android:layout_marginBottom="@dimen/dimens_5"
+            android:background="@color/colorWhite"
+            android:paddingBottom="@dimen/dimens_10">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_msg"
+                android:layout_width="@dimen/dimens_25"
+                android:layout_height="@dimen/dimens_25"
+                android:layout_margin="@dimen/dimens_10"
+                app:srcCompat="@drawable/ic_double_tick" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_items_reserved"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:layout_toRightOf="@+id/iv_msg"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="4 out of 6 items are reserved for you"
+                android:textSize="@dimen/dimens_15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_items_reserved_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_items_reserved"
+                android:layout_toRightOf="@+id/iv_msg"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="Items have been reserved for next 15 minutes"
+                android:textColor="@color/colorHintGrey"
+                android:textSize="@dimen/dimens_12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimens_5"
+            android:layout_marginRight="@dimen/dimens_5"
+            android:background="@color/colorWhite"
+            android:paddingBottom="@dimen/dimens_10">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_alert"
+                android:layout_width="@dimen/dimens_25"
+                android:layout_height="@dimen/dimens_25"
+                android:layout_margin="@dimen/dimens_10"
+                app:srcCompat="@drawable/ic_alert" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_items_out_of_stock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:layout_marginRight="@dimen/dimens_5"
+                android:layout_toRightOf="@+id/iv_alert"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="@string/items_out_of_stock"
+                android:textSize="@dimen/dimens_15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_items_out_of_stock"
+                android:layout_marginRight="@dimen/dimens_5"
+                android:layout_toRightOf="@+id/iv_alert"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="2 items in your cart are out of stock "
+                android:textColor="@color/colorHintGrey"
+                android:textSize="@dimen/dimens_12sp" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_items_in_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimens_5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_remove_unavailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:gravity="center"
+            android:paddingTop="@dimen/dimens_5"
+            android:text="@string/continue_will_remove_the_unavailable_items_from_your_cart"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_10sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimens_10"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_back_to_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimens_6"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:gravity="center"
+                    android:text="@string/back_to_cart"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/dimens_15sp" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="@dimen/dimens_0.5"
+                android:layout_height="@dimen/dimens_20"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorTextGrey" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dimens_6"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:gravity="center"
+                    android:text="@string/con_tinue"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/dimens_15sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

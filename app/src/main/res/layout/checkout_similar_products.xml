@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorHalfWhite"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="56dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dimens_10">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_similar_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/similar_products"
+            android:textSize="@dimen/dimens_20sp"
+            android:fontFamily="@font/sourcesanspro_bold"/>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dimens_20"
+            android:layout_height="@dimen/dimens_20"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/dimens_5"
+            app:srcCompat="@drawable/ic_close" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_similar_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingBottom="@dimen/dimens_20"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/similar_products_are_not_available_for_this_item"
+            android:gravity="center"
+            android:paddingTop="@dimen/dimens_20"
+            android:fontFamily="@font/sourcesanspro_semibold"
+            android:textSize="@dimen/dimens_15sp"/>
+
+      <android.support.v7.widget.AppCompatTextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="You may shop another item instead "
+          android:gravity="center"
+          android:fontFamily="@font/sourcesanspro_regular"
+          android:textSize="@dimen/dimens_12sp"
+          android:layout_marginTop="@dimen/dimens_15"/>
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_start_shopping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:background="@drawable/bg_outline_curve"
+            android:padding="@dimen/dimens_10"
+            android:text="@string/start_shopping"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dimens_15sp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_similar_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</LinearLayout>

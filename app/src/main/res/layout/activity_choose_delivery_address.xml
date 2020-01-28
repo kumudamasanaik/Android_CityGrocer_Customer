@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHalfWhite">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_header_blank" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimens_15">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_add_new_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:gravity="center"
+                android:text="@string/add_new_address"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_15sp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="@dimen/dimens_0.5"
+            android:layout_height="@dimen/dimens_20"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorTextGrey" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dimens_6"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:gravity="center"
+                android:text="@string/con_tinue"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimens_15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_footer"
+        android:layout_below="@id/appbar"
+        android:orientation="vertical">
+
+        <com.citygrocer.customer.customviews.ScreenStateView
+            android:id="@+id/multiState_rview"
+            style="@style/MultiStateViewStyle">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_add_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorLightGrey"
+                android:layout_margin="@dimen/dimens_5" />
+        </com.citygrocer.customer.customviews.ScreenStateView>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

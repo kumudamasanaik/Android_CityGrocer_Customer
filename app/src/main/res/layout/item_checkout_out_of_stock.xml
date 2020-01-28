@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_product"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dimens_8"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/dimens_10">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dimens_120"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimens_8"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:layout_marginRight="@dimen/dimens_8"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:layout_marginTop="@dimen/dimens_15"
+        android:orientation="vertical">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="@string/_2_1_050_44"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/dimens_12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_8"
+            android:layout_marginRight="@dimen/dimens_5"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:maxLines="4"
+            android:text="Colgate 360 Floss Tip Tooth-brush(Buy 2 Get 1 Free)"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/dimens_12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_find_similar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:text="@string/find_similar"
+                    android:gravity="center"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="@dimen/dimens_12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:gravity="center"
+                    android:textAllCaps="true"
+                    android:text="@string/notify_me"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/bg_btn_round_curve_white"
+                    android:paddingTop="@dimen/dimens_5"
+                    android:paddingBottom="@dimen/dimens_5"
+                    android:paddingLeft="@dimen/dimens_10"
+                    android:paddingRight="@dimen/dimens_10"
+                    android:textSize="@dimen/dimens_12sp" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

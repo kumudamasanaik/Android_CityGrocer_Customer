@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "773401385063",
+    "firebase_url": "https://citygrocerindia.firebaseio.com",
+    "project_id": "citygrocerindia",
+    "storage_bucket": "citygrocerindia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773401385063:android:3d7fde249a0aa7bf",
+        "android_client_info": {
+          "package_name": "com.citygrocer.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773401385063-sag00cci79naqpm05oe9umro196bo273.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.citygrocer.customer",
+            "certificate_hash": "ee7dbb40189368328a9a798532428f923b2caadb"
+          }
+        },
+        {
+          "client_id": "773401385063-36bljka7olg42hi6msudp5aceimi4fvg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.citygrocer.customer",
+            "certificate_hash": "cd4c11bdde6e767b11170fadadc070ef04cd5963"
+          }
+        },
+        {
+          "client_id": "773401385063-4klu8lao4dcc3ot4o3r95737taiggmb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6KmYT-d4VaRMhWEzHBRN65Iz2viNYm8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773401385063-4klu8lao4dcc3ot4o3r95737taiggmb6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

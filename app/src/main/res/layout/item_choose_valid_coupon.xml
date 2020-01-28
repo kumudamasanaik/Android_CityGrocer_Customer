@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/btn_background_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/iv_msg"
+                android:layout_width="@dimen/dimens_25"
+                android:layout_height="@dimen/dimens_25"
+                android:layout_margin="@dimen/dimens_10"
+                android:button="@drawable/selector_radio_button" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:background="@drawable/bg_dotted_rectangle"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:paddingLeft="@dimen/dimens_15"
+                android:paddingTop="@dimen/dimens_5"
+                android:paddingRight="@dimen/dimens_15"
+                android:paddingBottom="@dimen/dimens_5"
+                android:text="@string/save10"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_15sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_save_opt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_20"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:text="@string/save1"
+                android:textSize="@dimen/dimens_14sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_2"
+                android:layout_marginTop="@dimen/dimens_10"
+                android:text="@string/_60_00"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/sourcesanspro_semibold"
+                android:textSize="@dimen/dimens_14sp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_per_off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimens_40"
+            android:layout_marginTop="@dimen/dimens_10"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/_10_off_on_minimum_purchase_of_1500"
+            android:textColor="@color/text_title_color"
+            android:textSize="@dimen/dimens_12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dimens_10">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_40"
+                android:text="@string/valid_till_31st_dec_2018"
+                android:textColor="@color/text_title_color"
+                android:textSize="@dimen/dimens_12sp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/view_tc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dimens_10"
+                android:text="@string/view_t_c"
+                android:textColor="@color/colorTextBlue"
+                android:textSize="@dimen/dimens_15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

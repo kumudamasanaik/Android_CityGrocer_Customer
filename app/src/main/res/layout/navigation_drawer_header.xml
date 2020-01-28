@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="@dimen/dimens_5"
+    android:background="@color/colorPrimary"
+    android:clickable="true"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/nav_drawer_header_top_padding"
+    android:paddingBottom="@dimen/nav_drawer_header_top_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_20"
+            android:layout_marginTop="@dimen/dimens_20"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/welcome"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimens_14sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_welcome_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimens_5"
+            android:layout_marginTop="@dimen/dimens_20"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:text="@string/guest"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimens_14sp" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimens_20"
+        android:layout_marginBottom="@dimen/dimens_10"
+        android:drawableRight="@drawable/ic_right_arrow_white"
+        android:drawablePadding="@dimen/dimens_80"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:text="@string/login_register"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dimens_14sp"
+        android:visibility="visible" />
+</LinearLayout>

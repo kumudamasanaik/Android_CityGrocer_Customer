@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_sort_by"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:padding="@dimen/dimens_15"
+        android:text="@string/available_size"
+        android:textColor="@color/colorTextGrey"
+        android:textSize="@dimen/dimens_14sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:paddingLeft="@dimen/dimens_15"
+        android:paddingRight="@dimen/dimens_10"
+        android:paddingTop="@dimen/dimens_10"
+        android:text="@string/garnier_ultra_blends_revitalizing_shampoo_5_precious_herbs_free_conditioner_75ml"
+        android:textSize="@dimen/dimens_12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:paddingBottom="@dimen/dimens_15"
+        android:paddingLeft="@dimen/dimens_15"
+        android:paddingRight="@dimen/dimens_10"
+        android:text="@string/garnier_ultra_blends_revitalizing_shampoo_5_precious_herbs_free_conditioner_75ml"
+        android:textSize="@dimen/dimens_12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0.5"
+        android:background="@color/colorTextGrey" />
+
+    <LinearLayout
+        android:id="@+id/dynamic_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</LinearLayout>

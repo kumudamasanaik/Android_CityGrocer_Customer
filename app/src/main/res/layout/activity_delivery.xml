@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHalfWhite">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_header_blank" />
+    </android.support.design.widget.AppBarLayout>
+
+    <com.citygrocer.customer.customviews.ScreenStateView
+        android:id="@+id/multiState_rview"
+        style="@style/MultiStateViewStyle"
+        android:layout_above="@id/ll_footer"
+        android:layout_below="@id/appbar"
+        android:background="@color/colorHalfWhite">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimens_5"
+                    android:layout_marginRight="@dimen/dimens_5"
+                    android:layout_marginTop="@dimen/dimens_10"
+                    android:background="@color/colorWhite"
+                    android:paddingBottom="@dimen/dimens_10">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_msg"
+                        android:layout_width="@dimen/dimens_25"
+                        android:layout_height="@dimen/dimens_25"
+                        android:layout_margin="@dimen/dimens_10"
+                        app:srcCompat="@drawable/ic_location" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_items_reserved"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:layout_toRightOf="@+id/iv_msg"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="@string/deliver_to"
+                        android:textSize="@dimen/dimens_15sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_delivery_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_items_reserved"
+                        android:layout_toRightOf="@+id/iv_msg"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:maxLines="3"
+                        android:text="Items have been reserved for next 15 minutes"
+                        android:textColor="@color/colorHintGrey"
+                        android:textSize="@dimen/dimens_14sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_change_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/tv_delivery_address"
+                        android:layout_marginRight="@dimen/dimens_10"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:text="@string/change_address"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimens_15sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimens_5"
+                    android:layout_marginRight="@dimen/dimens_5"
+                    android:layout_marginTop="@dimen/dimens_2"
+                    android:background="@color/colorWhite"
+                    android:paddingBottom="@dimen/dimens_10">
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/iv_time"
+                        android:layout_width="@dimen/dimens_25"
+                        android:layout_height="@dimen/dimens_25"
+                        android:layout_margin="@dimen/dimens_10"
+                        app:srcCompat="@drawable/ic_access_time" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_deliver_slot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:layout_toRightOf="@+id/iv_time"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="@string/delivery_slot"
+                        android:textSize="@dimen/dimens_15sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_deliver_slot"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:layout_toRightOf="@+id/iv_time"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:textColor="@color/colorHintGrey"
+                        android:textSize="@dimen/dimens_14sp" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_day_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_day"
+                        android:layout_toRightOf="@+id/iv_time"
+                        android:fontFamily="@font/sourcesanspro_regular"
+                        android:text="07:00AM-09:30AM"
+                        android:textColor="@color/colorHintGrey"
+                        android:textSize="@dimen/dimens_14sp" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_slot_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/tv_day"
+                        android:layout_marginRight="@dimen/dimens_10"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:text="@string/change_slot"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/dimens_15sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimens_5"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dimens_10"
+                    android:paddingLeft="@dimen/dimens_10"
+                    android:paddingRight="@dimen/dimens_10">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_price_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimens_10"
+                        android:layout_toRightOf="@+id/iv_time"
+                        android:fontFamily="@font/sourcesanspro_semibold"
+                        android:text="@string/price_details"
+                        android:textSize="@dimen/dimens_15sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_cart_mrp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/cart_mrp_total"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_cart_mrp_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/rs"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_cart_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/cart_discount"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_cart_dicsount_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/_139_18"
+                            android:textColor="@color/text_app_color"
+                            android:textSize="@dimen/dimens_12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_mem_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="Membership Discount"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_mem_dicsount_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/_22_45"
+                            android:textColor="@color/text_app_color"
+                            android:textSize="@dimen/dimens_12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:background="@color/colorHalfWhite" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_cart_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/cart_price_total"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimens_12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_cart_price_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/rs"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimens_12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_delivery_charges"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/delivery_charges"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_delivery_charges_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/_20_00"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_token_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/delivery_token_discount"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_token_dicsount_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/_20"
+                            android:textColor="@color/text_app_color"
+                            android:textSize="@dimen/dimens_12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimens_1"
+                        android:layout_marginTop="@dimen/dimens_5"
+                        android:background="@color/colorHalfWhite" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_order_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:fontFamily="@font/sourcesanspro_bold"
+                            android:text="@string/order_total"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimens_15sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimens_5"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:layout_toRightOf="@id/tv_order_total"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="(888 items)"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimens_14sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_total_price_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/dimens_5"
+                            android:fontFamily="@font/sourcesanspro_bold"
+                            android:text="@string/_733_00"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/dimens_14sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_accepted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/accepted"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/tv_accepted_charge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:fontFamily="@font/sourcesanspro_regular"
+                            android:text="@string/_335_63"
+                            android:textColor="@color/text_title_color"
+                            android:textSize="@dimen/dimens_12sp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </com.citygrocer.customer.customviews.ScreenStateView>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimens_15">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_back_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dimens_6"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:gravity="center"
+                android:text="@string/back_to_cart"
+                android:textColor="@color/colorTextGrey"
+                android:textSize="@dimen/dimens_15sp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="@dimen/dimens_0.5"
+            android:layout_height="@dimen/dimens_20"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorTextGrey" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/tv_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dimens_6"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:gravity="center"
+                android:text="@string/payment"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/dimens_15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

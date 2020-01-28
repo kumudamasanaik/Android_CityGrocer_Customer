@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    style="@style/ToolbarStyleLogin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimens_5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_search_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/dimens_20"
+                android:layout_height="@dimen/dimens_20"
+                android:layout_marginEnd="@dimen/dimens_5"
+                app:srcCompat="@drawable/ic_search"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/ll_search_options"
+            android:background="@color/bg"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:hint="@string/search_for_your_delivery_location"
+            android:textColor="@color/colorBlack"
+            android:textColorHint="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_14sp" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

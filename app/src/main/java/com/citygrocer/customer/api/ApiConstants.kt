@@ -1,0 +1,40 @@
+package com.citygrocer.customer.api
+
+class ApiConstants {
+    companion object {
+        const val BASE_URL = "http://54.206.24.194:4000/"
+        const val IMAGE_BASE_URL = "http://54.206.24.194/citygrocer_prj1/public/"
+        const val SIGN_UP = "customer_table/api"
+        const val LOGIN = "customer_table/login"
+        const val SOCIAL_LOGIN_SIGNUP = "customer_table/social_login_reg"
+        const val FORGOT_PASSWORD = "customer_table/forgotpassword"
+        const val EDIT_REGISTER_DATA = "customer_table/editby_id"
+        const val UPDATE_REGISTER_DATA = "customer_table/update"
+        const val RESET_PASSWORD = "customer_table/verify"
+        const val CHANGE_PASSWORD = "customer_table/change_password"
+        const val VERIFY_OTP = "customer_table/verify"
+        const val RESEND_OTP = "customer_table/resendotp"
+        const val CATEGORY_SUB_CATEGORIES = "category/category_subcategory_getall"
+        const val HOMEPAGE = "home/home_page"
+        const val PRODUCT_CATEGORY = "product/product_view_Onlowcat"
+        const val PRODUCT_CATEGORY_SESSION = "product/product_view_Onlowcat"
+        const val PRODUCT_IMAGEVIEW_SKU = "product/product_findby_id"
+        const val SEARCH_DATA = "category/searchBy_category_name"
+        const val TERMS_AND_CONDITIONS = "terms_candi/terms_candi_get"
+        const val CART_ADD = "cart/add_cart"
+        const val GET_CART = "cart/cart_list/"
+        const val DELETE_CART_LIST = "cart/delete"
+        const val DELETE_CART_LIST_SESSION = "cart/delete_session"
+        const val GET_CART_ID = "cart/cart_list"
+        const val GET_CART_SESSION = "cart/cart_list"
+        const val ADD_ADDRESS = "addres/add_address"
+        const val CHOOSE_ADDRESS = "addres/address_list"
+        const val DELETE_ADDRESS = "addres/delete_address"
+        const val UPDATE_ADDRESS = "addres/update_address"
+        const val EDIT_ADDRESS = "addres/addressby_id"
+        const val SELECT_ADDRESS = "addres/address_selector"
+        const val MERGE_CART_DATA = "cart/map"
+        const val CHECKOUT = "delivery_slot/checkout"
+    }
+
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_header_blank" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimens_15"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:text="@string/enter_otp"
+        android:textColor="@color/colorTextGrey"
+        android:textSize="@dimen/dimens_12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_mobile_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimens_15"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/_9999999988"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_12sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_mobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimens_15"
+        android:layout_marginTop="@dimen/dimens_3"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/dimens_12sp"
+        android:textStyle="bold" />
+
+    <com.citygrocer.customer.customviews.Pinview
+        android:id="@+id/pinview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimens_5"
+        app:cursorVisible="true"
+        app:forceKeyboard="false"
+        app:inputType="number"
+        app:password="false"
+        app:pinBackground="@drawable/selector_edittext"
+        app:pinHeight="40dp"
+        app:pinLength="4"
+        app:pinWidth="65dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimens_15"
+        android:layout_marginTop="@dimen/dimens_5"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:textColor="@color/colorTextOrange"
+        android:textSize="@dimen/dimens_12sp"
+        android:text="00:00:60"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_40"
+        android:layout_margin="@dimen/dimens_15"
+        android:background="@drawable/bg_button_curve"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:text="@string/submit"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dimens_14sp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_resend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimens_15"
+        android:layout_marginTop="@dimen/dimens_3"
+        android:fontFamily="@font/sourcesanspro_semibold"
+        android:text="@string/resend_otp"
+        android:textAllCaps="true"
+        android:textColor="@color/colorForgotPassword"
+        android:textSize="@dimen/dimens_12sp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimens_30"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/dimens_8"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/not_your_number"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="@dimen/dimens_12sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/edit"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dimens_12sp" />
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

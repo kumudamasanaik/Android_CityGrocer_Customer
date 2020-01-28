@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_address_selection">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_msg"
+            android:layout_width="@dimen/dimens_25"
+            android:layout_height="@dimen/dimens_25"
+            android:layout_margin="@dimen/dimens_10"
+            app:srcCompat="@drawable/ic_radio_off" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_time_slot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_msg"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="07:00AM - 09:00AM"
+            android:textColor="@color/colorBlackOverlay"
+            android:textSize="@dimen/dimens_14sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_slot_availability"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dimens_10"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:text="@string/unavailable"
+            android:textColor="@color/text_app_color"
+            android:textSize="@dimen/dimens_10sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>

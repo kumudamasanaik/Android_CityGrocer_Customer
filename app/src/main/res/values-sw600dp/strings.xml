@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="et_hint_icsc_code">IFSC Code</string>
+    <string name="et_hint_bank_name">Bank Name</string>
+    <string name="et_hint_user_name">Username</string>
+</resources>
